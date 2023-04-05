@@ -20,18 +20,18 @@ plt.figure()
 # plt.ylabel('Pd')
 
 
-# xii=np.linspace(0,1,1000)
-# a=3
-# y=[]
-# for xi in xii:
-#     vt=1.5-1/3*np.log(11*(1-xi)/xi)
-#     y.append(xi*norm.cdf(vt) + 10*xi*(1-norm.cdf(vt)) + 100*(1-xi)*norm.cdf(vt-a) + (1-xi)*(1-norm.cdf(vt-a)))
-# ymax_idx = np.argmax(y)
-# plt.text(xii[ymax_idx],y[ymax_idx], '[{:.3f},{:.3f}]'.format(xii[ymax_idx],y[ymax_idx]))
-# plt.plot(xii,y)
-# plt.xlabel('xi')
-# plt.ylabel('Cmin')
-# plt.show()
+xii=np.linspace(0,1,1000)
+a=3
+y=[]
+for xi in xii:
+    vt=1.5-1/3*np.log(11*(1-xi)/xi)
+    y.append(xi*norm.cdf(vt) + 10*xi*(1-norm.cdf(vt)) + 100*(1-xi)*norm.cdf(vt-a) + (1-xi)*(1-norm.cdf(vt-a)))
+ymax_idx = np.argmax(y)
+plt.text(xii[ymax_idx],y[ymax_idx], '[{:.3f},{:.3f}]'.format(xii[ymax_idx],y[ymax_idx]))
+plt.plot(xii,y)
+plt.xlabel('xi')
+plt.ylabel('Cmin')
+plt.show()
 
 # def func1(x):
 #     return 11*(1-norm.cdf(x-3)) + (1-norm.cdf(x)) -11
